@@ -23,12 +23,12 @@ export const Card_Animation = ( _x:number, _delay:number) => {
      initial:{
         x: _x,
         y:undefined,
-        opacity:undefined
+        opacity:0
      },
      enter:{
         x: 0,
         y: 0,
-        opacity: undefined,
+        opacity: 1,
         transition:{
             delay:_delay,
             type:'spring',
