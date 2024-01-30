@@ -2,8 +2,18 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
+    [
+      "@pinia/nuxt",
+      { autoImports: ["defineStore", "acceptHMRUpdate"],},
+    ],
     "@nuxtjs/tailwindcss",
-    "@pinia/nuxt",
-    "@vueuse/motion/nuxt"
-  ]
+    "@vueuse/motion/nuxt",
+    "@nuxtjs/google-fonts",
+  ],
+  imports: { dirs: ['store'] },
+  googleFonts: {
+    families: {
+      "Rajdhani": [300,400,500,600]
+    }
+  }
 })

@@ -1,31 +1,23 @@
 <script setup lang="ts">
-
+  const theme = useThemeStore()
+  let isDark = computed(()=>{ return theme.get_theme })
 </script>
 
 <template>
     <section
-     class="w-full  flex flex-col space-y-1"
+     class="w-full min-h-screen flex flex-col"
     >
 
-     <div class="w-full sticky top-0 z-10">
+     <div class="w-full sticky top-0 z-50">
         <navbar/>
      </div>
 
-     <section class="flex w-full space-x-2 px-2 py-4 bg-gray-100">
+     <section
+       class="flex w-full h-full space-x-2 px-2 py-4 "
+       :class="isDark ? ''
+       :'bg-[#EBF5EE]'"
+     >
 
-        <div 
-         v-motion="Card_Animation(-50,475)"
-         class="flex h-64 bg-white w-full rounded-md border-2 border-teal-100"
-        >
-
-        </div>
-
-        <div 
-         v-motion="Card_Animation(50,475)"
-         class="flex h-64 bg-white w-full rounded-md border-2 border-teal-100"
-        >
-
-        </div>
 
      </section>
 
