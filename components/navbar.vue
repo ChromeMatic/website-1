@@ -45,6 +45,19 @@
                 </a>
             </div>
 
+            <button
+             @click="theme.changeTheme()"
+             class="border-2 transition-all ease-in-out duration-500 rounded-sm px-4 py-1"
+            >
+                <h1 v-if="isDark === false">
+                  🌑
+                </h1>
+                
+                <h1 v-if="isDark === true">
+                 🌤️
+                </h1>
+            </button>
+
         </nav>
     </section>
 </template>
