@@ -40,3 +40,40 @@ export const Card_Animation = ( _x:number, _delay:number) => {
 
    return motion
 }
+
+export const StagerEffect = (_x:number | undefined,y:number | undefined, _delay:number) =>{
+    
+    let motion:Anime = {
+        initial:{
+            x:_x,
+            y:y,
+            opacity:0
+        },
+        enter:{
+            x: 0,
+            y:0,
+            opacity:1,
+            transition:{
+                delay:_delay,
+                type:'spring',
+                stiffness: 75
+            }
+        },
+        leave:undefined
+    }
+
+    return motion
+}
+
+export const glowText = {
+    initial:{'text-shadow':'0 0 1px #fff'},
+    enter:{
+        'text-shadow':'4px 4px 12px #fff',
+        transition:{
+            duration:3575,
+            repeat: Infinity,
+            repeatType: 'reverse',
+            ease:'easeInOut'
+        }
+    }
+}
