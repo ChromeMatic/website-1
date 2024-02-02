@@ -78,6 +78,36 @@ export const glowText = {
     }
 }
 
+export const slight_move_1 = {
+    initial: {
+        y:0
+    },
+    enter:{
+        y:-4,
+        transition:{
+            duration:1025,
+            repeat: Infinity,
+            repeatType: 'reverse',
+            ease:'easeInOut'
+        }
+    }
+}
+
+export const slight_move_2 = {
+    initial: {
+        y:0
+    },
+    enter:{
+        y:4,
+        transition:{
+            duration:1025,
+            repeat: Infinity,
+            repeatType: 'reverse',
+            ease:'easeInOut'
+        }
+    }
+}
+
 export const dropdown={
     initial:{
         opacity: 0,

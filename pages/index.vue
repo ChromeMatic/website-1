@@ -16,12 +16,12 @@
      <section
        class="flex flex-col space-y-8 w-full h-full"
        :class="isDark ? 'bg-Dark text-white'
-       :'bg-[#EBF5EE]'"
+       :'bg-magnolia'"
      >
 
         <div
-         v-motion="StagerEffect(-100,0,500)"
-         class="w-full lg:h-[34rem] h-[50%] bg-center flex"
+         v-motion="StagerEffect(-100,0,575)"
+         class="w-full lg:h-[26rem] h-[28rem] bg-center flex"
         :class="isDark ? 'bg-light_Img'
         :'bg-dark_Img'"
         >
@@ -44,42 +44,60 @@
           </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center space-y-4 p-4">
+        <div 
+         class="flex flex-col justify-center items-center space-y-4 p-4"
 
-          <h2 class="text-3xl text-center">
+        >
+
+          <h2
+          v-motion="StagerEffect(0,-50,425)" 
+           class="text-4xl text-center overline p-4 border rounded-md"
+           :class="isDark ? 'text-teal-500 bg-innerDark border-teal-950'
+           :'text-teal-700 bg-white border-teal-50'"
+          >
             About Us
           </h2>
           
           <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
 
             <div
-              class="py-8 px-2 rounded-md flex flex-col space-y-3 justify-start items-center"
-              :class="isDark ? 'bg-innerDark'
-              :'bg-green-400/20 text-teal-800'"
+              v-motion="StagerEffect(0,75,625)"
             >
-                <h3 class="text-xl font-semibold">
-                  Mission
-                </h3>
+              <div
+                v-motion="slight_move_1" 
+                class="py-8 px-4 rounded-md flex flex-col space-y-3 justify-start items-center border-2 lg:h-48"
+                :class="isDark ? 'bg-innerDark border-teal-900 text-teal-500'
+                :'bg-white text-teal-700 border-teal-100 shadow-cus_sh_1'"
+              >
+                  <h3 class="text-2xl font-semibold">
+                    Mission
+                  </h3>
 
-                <p>
-                  A premier technical and Vocational Educational Centre established to 
-                  train and certify young adults in relevant labour market demand courses.
-                </p>
+                  <p class="subpixel-antialiased leading-6 text-center font-medium">
+                    A premier technical and Vocational Educational Centre established to 
+                    train and certify young adults in relevant labour market demand courses.
+                  </p>
+              </div>
             </div>
-
+            
             <div
-              class="py-8 px-2 rounded-md flex flex-col space-y-3 justify-start items-center"
-              :class="isDark ? 'bg-innerDark'
-              :'bg-green-400/20 text-teal-800'"
+            v-motion="StagerEffect(0,-75,725)"
             >
-                <h3 class="text-xl font-semibold">
+             <div
+              v-motion="slight_move_2"
+              class="py-8 px-4 rounded-md flex flex-col space-y-3 justify-start items-center border-2 lg:h-48"
+              :class="isDark ? 'bg-innerDark border-teal-900 text-teal-500'
+              :'bg-white text-teal-700 border-teal-100 shadow-cus_sh_1'"
+            >
+                <h3 class="text-2xl font-semibold">
                   Vision
                 </h3>
 
-                <p>
+                <p class="subpixel-antialiased leading-6 text-center font-medium">
                   A world-class educational institution developed to prepare young people to
                   meet the needs of the labour market and contribute to the improvement of  their quality of life and ultimately the Jamaican Society.
                 </p>
+             </div>
             </div>
 
 

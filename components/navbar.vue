@@ -5,10 +5,8 @@
 
     let link:Links[] = [
         { name:"Home", path:"#"},
-        { name:"Mission", path:"#mission"},
-        { name:"Vision",path:"#vision"},
-        { name:"Objectives",path:"#obj"},
-        { name:"About Us",path:"#about"}
+        { name:"About Us",path:"#about"},
+        { name:"Objectives",path:"#obj"}
     ]
 
     const theme = useThemeStore()
@@ -24,7 +22,7 @@
      v-motion="Navbar_Animation"
      class="flex flex-col space-y-3 w-full p-2 font-Rajdhani font-semibold"
      :class="isDark ? ' bg-innerDark'
-     :'bg-primary'"
+     :'bg-pis'"
     >
         <nav
          class="w-full rounded-md py-2 px-4 flex justify-between items-center "
