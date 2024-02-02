@@ -10,7 +10,7 @@ export const Navbar_Animation:Anime={
         x:undefined,
         opacity:1,
         transition:{
-            delay:25,
+            delay:25 + 200,
             type:'spring',
             stiffness:75
         }
@@ -54,7 +54,7 @@ export const StagerEffect = (_x:number | undefined,y:number | undefined, _delay:
             y:0,
             opacity:1,
             transition:{
-                delay:_delay,
+                delay:_delay + 200,
                 type:'spring',
                 stiffness: 75
             }
@@ -74,6 +74,31 @@ export const glowText = {
             repeat: Infinity,
             repeatType: 'reverse',
             ease:'easeInOut'
+        }
+    }
+}
+
+export const dropdown={
+    initial:{
+        opacity: 0,
+        y: -25,
+    },
+    enter:{
+        opacity: 1,
+        y: 0,
+        transition:{
+            delay:275,
+            type:'spring',
+            stiffness: 75
+        }
+    },
+    leave:{
+        y:-25,
+        opacity:0,
+        transition:{
+            delay:175,
+            type:'spring',
+            stiffness: 75
         }
     }
 }
