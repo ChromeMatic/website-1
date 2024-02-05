@@ -5,8 +5,9 @@
 
     let link:Links[] = [
         { name:"Home", path:"#"},
+        { name:"Mission", path:"#Mission_Vision"},
         { name:"About Us",path:"#about"},
-        { name:"Objectives",path:"#obj"}
+        { name:"Objectives",path:"#objectives"}
     ]
 
     const theme = useThemeStore()

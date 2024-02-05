@@ -83,9 +83,9 @@ export const slight_move_1 = {
         y:0
     },
     enter:{
-        y:-4,
+        y:-2,
         transition:{
-            duration:1025,
+            duration:1275,
             repeat: Infinity,
             repeatType: 'reverse',
             ease:'easeInOut'
@@ -98,7 +98,7 @@ export const slight_move_2 = {
         y:0
     },
     enter:{
-        y:4,
+        y:2,
         transition:{
             duration:1025,
             repeat: Infinity,
