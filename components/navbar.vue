@@ -4,9 +4,8 @@
     type Links = {  name:string, path:string }
 
     let link:Links[] = [
-        { name:"Home", path:"#"},
+        { name:"Home", path:"/"},
         { name:"Mission", path:"#Mission_Vision"},
-        { name:"About Us",path:"#about"},
         { name:"Objectives",path:"#objectives"}
     ]
 
@@ -49,6 +48,16 @@
                 >
                     {{ item.name }}
                 </a>
+
+                <NuxtLink 
+                 to="/about"
+                 class="transition-all ease-in-out duration-1000 rounded-md px-4 py-1
+                 lg:hover:scale-110 border-2"
+                 :class="isDark ? 'lg:hover:bg-white/20 backdrop-blur-sm lg:hover:border-teal-800 border-teal-900'
+                 :'text-[#636B79] lg:hover:text-[#0E558E] lg:hover:border-[#0E558E] '"
+                >
+                    <h2>About Us</h2>
+                </NuxtLink>
             </div>
 
             <button

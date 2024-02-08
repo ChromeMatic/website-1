@@ -21,8 +21,7 @@
 
 <template>
     <section
-     class="w-full min-h-screen flex flex-col transition-all 
-     ease-in-out duration-700"
+     class="w-full min-h-screen flex flex-col"
     >
 
      <div class="w-full sticky top-0 z-50">
