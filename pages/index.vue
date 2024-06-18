@@ -2,6 +2,16 @@
   const theme = useThemeStore()
   let isDark = computed(()=>{ return theme.get_theme })
 
+  useHead({
+    title: "Fellowship Employment Center",
+    meta:[
+      {
+        name: 'description',
+        content:"Creating and maintaining quality educational programs aligned with prescribed Standards of Learning is crucial for student success and community growth. By delivering a rigorous and relevant curriculum that meets students' needs and labor market demands, we ensure comprehensive educational experiences. Our state-of-the-art online facilities, advanced instructional technology, and modern equipment support effective teaching and learning processes. We foster progressive and excellent relationships with students, parents, member schools, and the broader business community. Additionally, our work-based experiences and apprenticeship opportunities reinforce academic learning and technical training, empowering students to realize their full potential. Our commitment to excellence and high expectations drives outstanding performance and individual success."
+      }
+    ]
+  })
+
   let Objectives:string[] = [
     "Establish and maintain quality educational programmes that are aligned to prescribed Standards of Learning and supports the curricula.",
     "The delivery of a rigorous and relevant curricula meeting student needs, preferences, and labour market demands.",
