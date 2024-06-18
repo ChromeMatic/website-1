@@ -31,9 +31,11 @@
         >
 
             <div>
-              <h1>
-                Logo
-              </h1>
+              <img 
+                class="h-[3.5rem] rounded-md"
+                src="../public/images/WhatsApp Image 2024-06-17 at 9.38.44 AM.jpeg" 
+                alt="logo"
+              >
             </div>
 
             <div class="hidden md:flex justify-center items-center space-x-4">

@@ -15,7 +15,7 @@
 
         <div 
          v-motion="StagerEffect(0,-100,575)"
-         class="flex flex-col space-y-6 w-full justify-center items-center py-4"
+         class="flex flex-col space-y-6 w-full h-full justify-center items-center py-4"
          :class="isDark ? 'bg-Dark text-white':'bg-off_white'"
         >
 
@@ -29,7 +29,7 @@
 
             <img 
              class="h-[32rem]"
-             :src="isDark ? '/team_dark.svg':'/team.svg'" 
+             src="../public/images/WhatsApp Image 2024-06-17 at 9.38.44 AM.jpeg" 
              alt="About us"
             >
 
