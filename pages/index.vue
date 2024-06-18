@@ -41,7 +41,7 @@
         :'bg-dark_Img'"
         >
           <div
-           class="w-full h-full flex justify-center items-center backdrop-blur-sm"
+           class="w-full h-full flex justify-center items-center backdrop-blur-none"
            :class="isDark ? 'bg-green-500/10 text-white'
            :'bg-[#202124]/40 text-white'"
           >
