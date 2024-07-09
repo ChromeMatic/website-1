@@ -25,13 +25,31 @@
     >
         <nav
           v-motion="Navbar_Animation"
-          class="w-full p-2.5 rounded-md border-2 flex justify-between items-center font-semibold"
+          class="w-full lg:p-2.5 p-2 rounded-md border-2 flex justify-between items-center font-semibold"
           :class="isDark ? 'bg-Dark text-teal-500 border-teal-900'
           :'bg-white border-green-300 text-teal-700'"
         >
-            <h1 class="overline font-semibold lg:text-xl">
-                Fellowship-Employment-Center
-            </h1>
+          <div class="md:hidden flex">
+            <button
+                @click="open_menu()"
+                class="w-full rounded-md border-2 lg:p-1.5 p-1"
+                :class="isDark ? 'bg-innerDark border-teal-950'
+                  :''"
+            >
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-8"
+              >
+                <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+
+          <h1 class="overline font-semibold lg:text-xl">
+             Fellowship-Employment-Center
+          </h1>
 
            <div class="hidden md:flex justify-center items-center space-x-8">
                 <NuxtLink
@@ -99,23 +117,7 @@
                 </a>
            </div>
 
-           <div class="md:hidden flex">
-                <button
-                  @click="open_menu()"
-                  class="w-full rounded-md border-2 p-1.5"
-                  :class="isDark ? 'bg-innerDark border-teal-950' 
-                  :''"
-                >
-                    <svg 
-                     xmlns="http://www.w3.org/2000/svg" 
-                     viewBox="0 0 24 24" 
-                     fill="currentColor" 
-                     class="size-8"
-                    >
-                     <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-           </div>
+
 
            <button
              @click="theme.changeTheme()"

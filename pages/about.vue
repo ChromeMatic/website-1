@@ -5,7 +5,7 @@
 
 <template>
   <section
-    class="flex flex-col space-y-8 w-full px-4 py-8"
+    class="flex flex-col space-y-8 w-full px-4 py-8 min-h-screen"
     :class="isDark ? 'text-teal-500'
     :'text-teal-700'"
   >
