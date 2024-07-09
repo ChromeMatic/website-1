@@ -30,110 +30,104 @@
 </script>
 
 <template>
-    <section
-     class="w-full min-h-screen flex flex-col"
+  <section 
+   class="w-full flex flex-col"
+   :class="isDark ? 'bg-Dark text-teal-500'
+   :''"
+  >
+    
+    <div 
+     v-motion="_StagerEffect_static(275,-25,0)"
+     class="w-full h-[95vh] bg-dark_Img bg-cover"
     >
-
-     <div class="w-full sticky top-0 z-50">
-        <navbar/>
-     </div>
-
-     <section
-       class="flex flex-col space-y-8 w-full h-full"
-       :class="isDark ? 'bg-Dark text-white'
-       :'bg-magnolia'"
-     >
-
-        <div
-         v-motion="StagerEffect(-100,0,575)"
-         class="w-full lg:h-screen h-[28rem] bg-center flex"
-        :class="isDark ? 'bg-light_Img'
-        :'bg-dark_Img'"
+      <div
+       v-motion="_StagerEffect_static(375,0,-50)"
+       class="flex flex-col space-y-1 justify-center items-center w-full h-full transition-all ease-in-out duration-700"
+       :class="isDark ? 'bg-innerDark/60 text-teal-100'
+       :'bg-Dark/40 text-white'"
+      >
+        <h1
+         v-motion="glowText" 
+         class="text-7xl font-semibold"
         >
-          <div
-           class="w-full h-full flex justify-center items-center backdrop-blur-none "
-           :class="isDark ? 'bg-green-500/10 text-white'
-           :'bg-[#202124]/40 text-white'"
-          >
-              <span class="flex flex-col justify-center items-center space-y-4 w-full">
-                <h1
-                 class="lg:text-6xl text-4xl text-center"
-                >
-                  Fellowship & Employment Center
-                </h1>
-                <h2 class="lg:text-2xl text-center">
-                  Fellowship Empowerment Centre Ltd is a Technical and Vocational Skills Training Centre.
-                </h2>
-              </span>
-          </div>
-        </div>
+          Fellowship & Employment Center
+        </h1>
+        <h2 class="text-2xl">
+          Fellowship Empowerment Centre Ltd is a Technical and Vocational Skills Training Centre.
+        </h2>
+      </div>
+    </div>
 
-        <div 
-         id="Mission_Vision"
-         class="flex flex-col justify-center items-center space-y-4 p-4 "
+    <section
+     class="w-full p-2 flex flex-col space-y-4 overflow-hidden"
+    >
+      <div
+       class="w-full lg:py-4 py-2 px-4 flex flex-col justify-center items-center space-y-4"
+      >
+        
+        <h1
+         v-motion="_StagerEffect(385,0,25)"
+         class="text-3xl font-semibold"
+         :class="isDark ? 'text-teal-500':'text-teal-700'"
         >
+          Mission & Vision
+        </h1>
 
-          <h2
-           v-motion="StagerEffect(0,-50,425)" 
-           class="text-4xl text-center overline p-4 border rounded-md"
-           :class="isDark ? 'text-teal-500 bg-innerDark border-teal-950'
-           :'text-teal-700 bg-white border-teal-50'"
-          >
-            Mission & Vision
-          </h2>
+        <div class="w-full grid lg:grid-cols-2 grid-cols-1 gap-4">
           
-          <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
-
+          <div
+           v-motion="_StagerEffect(375,0,50)"
+           class="w-full" 
+          >
             <div
-              v-motion="StagerEffect(0,75,625)"
+             v-motion="card_movement_1"
+             class="border-2 rounded-md flex flex-col justify-center items-center space-y-8 p-4"
+             :class="isDark ? 'bg-teal-950 border-teal-950 shadow-cus_dark_sh text-teal-500':
+             'shadow-cus_sh_1 text-teal-700'"
             >
-              <div
-                v-motion="slight_move_1" 
-                class="py-8 px-4 rounded-md flex flex-col space-y-3 justify-start items-center border-2 lg:h-48"
-                :class="isDark ? 'bg-innerDark border-teal-900 text-teal-500'
-                :'bg-white text-teal-700 border-teal-100 shadow-cus_sh_1'"
+              <h1 class="text-2xl font-semibold overline">Mission</h1>
+
+              <p 
+                class="text-center"
               >
-                  <h3 class="text-2xl font-semibold">
-                    Mission
-                  </h3>
-
-                  <p class="subpixel-antialiased leading-6 text-center font-medium">
-                    A premier technical and Vocational Educational Centre established to 
-                    train and certify young adults in relevant labour market demand courses.
-                  </p>
-              </div>
-            </div>
-            
-            <div
-            v-motion="StagerEffect(0,-75,725)"
-            >
-             <div
-              v-motion="slight_move_2"
-              class="py-8 px-4 rounded-md flex flex-col space-y-3 justify-start items-center border-2 lg:h-48"
-              :class="isDark ? 'bg-innerDark border-teal-900 text-teal-500'
-              :'bg-white text-teal-700 border-teal-100 shadow-cus_sh_1'"
-            >
-                <h3 class="text-2xl font-semibold">
-                  Vision
-                </h3>
-
-                <p class="subpixel-antialiased leading-6 text-center font-medium">
-                  A world-class educational institution developed to prepare young people to
-                  meet the needs of the labour market and contribute to the improvement of  their quality of life and ultimately the Jamaican Society.
-                </p>
-             </div>
+                A premier technical and Vocational Educational Centre established to train and certify young adults in relevant labour market demand courses.
+              </p>
             </div>
           </div>
+
+          <div
+           v-motion="_StagerEffect(475,0,50)"
+           class="w-full" 
+          >
+            <div
+             v-motion="card_movement_2"
+             class="border-2 rounded-md flex flex-col justify-center items-center space-y-8 p-4"
+             :class="isDark ? 'bg-teal-950 border-teal-950 shadow-cus_dark_sh text-teal-500':
+             'shadow-cus_sh_1 text-teal-700'"
+            >
+              <h1 class="text-2xl font-semibold overline">Vision</h1>
+
+              <p class="text-center">
+                A world-class educational institution developed to prepare young people to meet the needs of the labour market and contribute to the improvement of their quality of life and ultimately the Jamaican Society.
+              </p>
+            </div>
+          </div>
+
+
         </div>
 
+      </div>
+
+      <div class="w-full flex justify-center items-center py-1.5">
         <div
-         v-motion="StagerEffect(100,0,525)"
-         class="p-4 w-full flex h-[32rem]"
+         v-motion="_StagerEffect(525,0,100)"
+         class="p-4 w-full flex h-[28rem]"
         >
           <div
-          class="flex flex-col  space-y-8  w-full h-full bg-center rounded-md"
-          :class="isDark ? 'cus_dark_sh bg-values'
-          :'shadow-cus_sh_1 bg-values_light'"
+           v-motion="card_movement_1"
+           class="flex flex-col  space-y-8  w-full h-full bg-center rounded-md"
+           :class="isDark ? 'border-2 border-teal-950 shadow-cus_dark_sh bg-values'
+           :'shadow-cus_sh_1 bg-values_light'"
           >
            <div
              class="w-full flex flex-col justify-center items-start lg:space-y-6 space-y-4
@@ -155,15 +149,47 @@
 
           </div>
         </div>
+      </div>
 
+      <div
+       class="w-full"
+       v-motion="_StagerEffect(585,0,25)"
+      >
         <div
-         id="objectives"
-         v-motion="StagerEffect(100,0,625)"
-         class="flex lg:space-x-4 lg:flex-row flex-col space-x-0 lg:space-y-0 space-y-3 h-[32rem]
-         p-4"
-         :class="isDark ? 'bg-innerDark'
-         :'bg-off_wite'"
+        v-motion="StagerEffect(100,0,575)"
+        class="flex flex-col space-y-4 p-4 justify-center items-center"
+        :class="isDark ? 'bg-innerDark'
+        :'bg-off_wite'" 
         >
+        
+        <h2 class="font-semibold text-xl overline">PLACEMENT SERVICES</h2>
+
+        <object 
+          data="OVERSEAS-EMPLOYMENT-AGENCY-CONTRACT- (2)(1).pdf" 
+          class="rounded-md lg:h-[32rem] h-[26rem] w-[34rem] lg:w-full"
+        ></object>
+        
+        <a
+         class="rounded-md border-2 p-1.5 w-1/2 flex justify-center items-center
+         border-teal-700 text-teal-700 font-semibold capitalize transition-all ease-in-out
+         duration-700"
+         :class="isDark ? 'hover:bg-indigo-500/20 hover:text-indigo-500 hover:border-indigo-500'
+         :'hover:bg-indigo-500 hover:text-white hover:border-indigo-500'"
+         href="/OVERSEAS-EMPLOYMENT-AGENCY-CONTRACT- (2)(1).pdf"
+         download
+        >
+          <h3>download</h3>
+        </a>
+        </div> 
+      </div>
+
+      <div
+        v-motion="StagerEffect(100,0,625)"
+        class="flex lg:space-x-4 lg:flex-row flex-col space-x-0 lg:space-y-0 space-y-3 h-[32rem]
+        p-4"
+        :class="isDark ? 'bg-innerDark'
+        :'bg-off_wite'"
+      >
           <div 
            class="flex justify-center items-center rounded-md bg-goals w-full h-full bg-cover"
           ></div>
@@ -186,9 +212,11 @@
             </p>
           </div>
 
-        </div>
+      </div>
 
-     </section>
+     
 
     </section>
+
+  </section>
 </template>

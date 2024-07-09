@@ -1,21 +1,37 @@
 
 export const Navbar_Animation:Anime={
     initial:{
-        y: -100,
-        x: undefined,
+        y: 0,
+        x: -50,
         opacity:0
     },
     enter:{
         y:0,
-        x:undefined,
+        x:0,
         opacity:1,
         transition:{
-            delay:25 + 200,
+            delay:175,
             type:'spring',
-            stiffness:75
+            stiffness: 75
         }
     },
     leave:undefined
+}
+
+export const Navbar_Animation2={
+    initial:{
+        y:-50,
+        opacity:0
+    },
+    enter:{
+        y:0,
+        opacity:1,
+        transition:{
+            delay:375,
+            type:'spring',
+            stiffness: 50
+        }
+    }
 }
 
 export const Card_Animation = ( _x:number, _delay:number) => {
@@ -66,14 +82,15 @@ export const StagerEffect = (_x:number | undefined,y:number | undefined, _delay:
 }
 
 export const glowText = {
-    initial:{'text-shadow':'0 0 1px #fff'},
+    initial:{
+        'text-shadow':'0 0 1px #fff'
+    },
     enter:{
-        'text-shadow':'4px 4px 12px #fff',
+       'text-shadow':'4px 4px 12px #fff',
         transition:{
-            duration:3575,
+            duration:5500,
             repeat: Infinity,
             repeatType: 'reverse',
-            ease:'easeInOut'
         }
     }
 }
@@ -129,4 +146,82 @@ export const dropdown={
             stiffness: 75
         }
     }
+}
+
+export const _StagerEffect = (delay:number, _x:number, _y:number) =>{
+
+    let motion = {
+        initial:{
+            x: _x,
+            y: _y,
+            opacity: 0,
+        },
+        visible:{
+            x: 0,
+            y: 0,
+           opacity: 1, 
+           transition:{
+                duration: delay,
+                type: 'Spring',
+                stiffness: 75,
+                ease:"easeInOut",
+           }
+        }
+    }
+
+    return motion
+}
+
+export const card_movement_1 = {
+    initial:{
+        x:-3
+    },
+    enter:{
+        x:0,
+        transition:{
+            duration:1050,
+            repeat: Infinity,
+            ease:"easeInOut",
+            repeatType: 'reverse',
+        }
+    }
+}
+
+export const card_movement_2 = {
+    initial:{
+        x:3
+    },
+    enter:{
+        x:0,
+        transition:{
+            duration:1050,
+            repeat: Infinity,
+            ease:"easeInOut",
+            repeatType: 'reverse',
+        }
+    }
+}
+
+export const _StagerEffect_static = (delay:number, _x:number, _y:number) =>{
+
+    let motion = {
+        initial:{
+            x: _x,
+            y: _y,
+            opacity: 0,
+        },
+        enter:{
+            x: 0,
+            y: 0,
+           opacity: 1, 
+           transition:{
+                duration: delay,
+                type: 'Spring',
+                stiffness: 75,
+                ease:"easeInOut",
+           }
+        }
+    }
+
+    return motion
 }
